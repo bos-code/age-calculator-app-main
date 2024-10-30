@@ -61,9 +61,11 @@ const validation = function () {
     }
   });
   input_yT.addEventListener("input", () => {
+     const currYear = new Date().getFullYear()
+    console.log(currYear)
     if (
       +input_yT.value < 1970 ||
-      +input_yT.value > 2023 ||
+      +input_yT.value > currYear ||
       isNaN(+input_yT.value) === true
     ) {
       input_yT.classList.add("invalid");
